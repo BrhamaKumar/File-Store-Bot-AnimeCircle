@@ -28,7 +28,7 @@ OWNER_ID = int(os.environ.get("OWNER_ID", "6301693754"))
 PORT = os.environ.get("PORT", "8080")
 
 #Database 
-DB_URI = os.environ.get("DATABASE_URL", "0wQNzmwMkUiqOZa1@cluster0.8jaksiw.mongodb.net")
+DB_URI = os.environ.get("DATABASE_URL", "mongodb+srv://daniel811802:0wQNzmwMkUiqOZa1@cluster0.8jaksiw.mongodb.net/?retryWrites=true&w=majority")
 DB_NAME = os.environ.get("DATABASE_NAME", "Cluster0")
 
 #force sub channel id, if you want enable force sub
