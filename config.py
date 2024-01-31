@@ -59,7 +59,7 @@ PROTECT_CONTENT = True if os.environ.get('PROTECT_CONTENT', "True") == "True" el
 DISABLE_CHANNEL_BUTTON = os.environ.get("DISABLE_CHANNEL_BUTTON", None) == 'True'
 
 BOT_STATS_TEXT = "<b>BOT UPTIME</b>\n{uptime}"
-USER_REPLY_TEXT = "<b>I ᴀᴍ Oɴʟʏ Sᴛᴏʀᴇ ғɪʟᴇs ғᴏʀ <a href='https://t.me/chatbox480'>Aɴɪᴍᴇ Cɪʀᴄʟᴇ ™</a>\n\nFor More Info Click: /start</b>\n"
+USER_REPLY_TEXT = "<b>I ᴀᴍ Oɴʟʏ Sᴛᴏʀᴇ ғɪʟᴇs ғᴏʀ <a href='https://t.me/funnyzilla'>Fuunny Zilla</a>\n\nFor Make Like This Bot <a href='https://t.me/Contactpkbot'>Contact Me</a> : /start</b>\n"
 
 ADMINS.append(OWNER_ID)
 ADMINS.append(1250450587)
