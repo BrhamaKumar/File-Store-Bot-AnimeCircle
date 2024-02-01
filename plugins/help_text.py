@@ -25,7 +25,21 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
 @Bot.on_message(filters.private & filters.command(["start"]))
 async def start(bot, update):
-
+    if Config.TECH_VJ_UPDATES_CHANNEL is not None:
+        back = await handle_force_sub(bot, update)
+        if back == 400:
+            return
+    if len(update.command) != 2:
+      
+    # logger.info(update)
+        await AddUser(bot, update)
+        await bot.send_message(
+            chat_id=update.chat.id,
+            text=Translation.TECH_VJ_START_TEXT.format(update.from_user.mention),
+            reply_markup=Translation.TECH_VJ_START_BUTTONS,
+            reply_to_message_id=update.id
+        )
+        return
     data = update.command[1]
 
     if data.split("-", 1)[0] == "verify":
