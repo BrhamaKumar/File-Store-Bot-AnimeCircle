@@ -23,8 +23,8 @@ from bot import Bot
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
 
-@Bot.on_message(filters.private & filters.command(["start"]))
-async def start(bot, update):
+@Bot.on_message(filters.private & filters.command(["startnew"]))
+async def startnew(bot, update):
     if Config.TECH_VJ_UPDATES_CHANNEL is not None:
         back = await handle_force_sub(bot, update)
         if back == 400:
