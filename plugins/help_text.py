@@ -15,7 +15,7 @@ from config import Config
 from translation import Translation
 from utils import verify_user, check_token
 from pyrogram import filters, enums
-from helper.database.adduser import AddUser
+from database.adduser import AddUser
 from pyrogram import Client
 logging.getLogger("pyrogram").setLevel(logging.WARNING)
 
