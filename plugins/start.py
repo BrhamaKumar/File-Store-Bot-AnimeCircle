@@ -157,25 +157,25 @@ async def not_joined(client: Client, message: Message):
         )
         return
 
-    data = update.command[1]
+    data = message.command[1]
 
     if data.split("-", 1)[0] == "verify":
         userid = data.split("-", 2)[1]
         token = data.split("-", 3)[2]
-        if str(update.from_user.id) != str(userid):
-            return await update.reply_text(
+        if str(message.from_user.id) != str(userid):
+            return await message.reply_text(
                 text="<b>ᴇxᴘɪʀᴇᴅ ʟɪɴᴋ ᴏʀ ɪɴᴠᴀʟɪᴅ ʟɪɴᴋ !</b>",
                 protect_content=True
             )
         is_valid = await check_token(bot, userid, token)
         if is_valid == True:
-            await update.reply_text(
+            await message.reply_text(
                 text=f"<b>ʜᴇʟʟᴏ {update.from_user.mention} 👋,\nʏᴏᴜ ᴀʀᴇ sᴜᴄᴄᴇssғᴜʟʟʏ ᴠᴇʀɪғɪᴇᴅ !\n\nɴᴏᴡ ʏᴏᴜ ʜᴀᴠᴇ ᴜɴʟɪᴍɪᴛᴇᴅ ᴀᴄᴄᴇss ғᴏʀ ᴀʟʟ ᴜʀʟ ᴜᴘʟᴏᴀᴅɪɴɢ ᴛɪʟʟ ᴛᴏᴅᴀʏ ᴍɪᴅɴɪɢʜᴛ.</b>",
                 protect_content=True
             )
             await verify_user(bot, userid, token)
         else:
-            return await update.reply_text(
+            return await message.reply_text(
                 text="<b>ᴇxᴘɪʀᴇᴅ ʟɪɴᴋ ᴏʀ ɪɴᴠᴀʟɪᴅ ʟɪɴᴋ !</b>",
                 protect_content=True
             )
