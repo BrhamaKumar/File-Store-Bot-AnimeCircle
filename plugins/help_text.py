@@ -19,25 +19,12 @@ from helper.database.adduser import AddUser
 from pyrogram import Client
 logging.getLogger("pyrogram").setLevel(logging.WARNING)
 
+from bot import Bot
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
 
-@Client.on_message(filters.private & filters.command(["help"]))
-async def help_user(bot, update):
-    # logger.info(update)
-    await AddUser(bot, update)
-    await bot.send_message(
-        chat_id=update.chat.id,
-        text=Translation.TECH_VJ_HELP_TEXT,
-        reply_markup=Translation.TECH_VJ_HELP_BUTTONS,
-        parse_mode=enums.ParseMode.HTML,
-        disable_web_page_preview=True,
-        reply_to_message_id=update.id
-    )
-
-
-@Client.on_message(filters.private & filters.command(["start"]))
-async def start(bot, update):
+@Bot.on_message(filters.private & filters.command(["start"]))
+async def start(client: Client, message: Message):
     if Config.TECH_VJ_UPDATES_CHANNEL is not None:
         back = await handle_force_sub(bot, update)
         if back == 400:
