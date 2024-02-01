@@ -111,3 +111,5 @@ class Config(object):
 
     # database uri (mongodb)
     TECH_VJ_DATABASE_URL = os.environ.get("TECH_VJ_DATABASE_URL", "")
+
+    TECH_VJ_SESSION_NAME = "FILE-STORE-ADV-BOT"
