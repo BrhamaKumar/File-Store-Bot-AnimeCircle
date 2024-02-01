@@ -3,6 +3,6 @@
 # Ask Doubt on telegram @KingVJ01
 
 from config import Config
-from helper.database.database import Database
+from database.databasee import Database
 
 techvj = Database(Config.TECH_VJ_DATABASE_URL, Config.TECH_VJ_SESSION_NAME)
