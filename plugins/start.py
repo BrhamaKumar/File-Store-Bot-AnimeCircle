@@ -21,9 +21,9 @@ from config import Config
 
 @Bot.on_message(filters.command('start') & filters.private & subscribed)
 async def start_command(client: Client, message: Message):
-    if not await check_verification(bot, update.from_user.id) and Config.TECH_VJ == True:
+    if not await check_verification(Client, update.from_user.id) and Config.TECH_VJ == True:
         btn = [[
-            InlineKeyboardButton("👨‍💻 ᴠᴇʀɪғʏ", url=await get_token(bot, update.from_user.id, f"https://telegram.me/{Config.TECH_VJ_BOT_USERNAME}?start="))
+            InlineKeyboardButton("👨‍💻 ᴠᴇʀɪғʏ", url=await get_token(Client, update.from_user.id, f"https://telegram.me/{Config.TECH_VJ_BOT_USERNAME}?start="))
             ],[
             InlineKeyboardButton("🔻 ʜᴏᴡ ᴛᴏ ᴏᴘᴇɴ ʟɪɴᴋ ᴀɴᴅ ᴠᴇʀɪғʏ 🔺", url=f"{Config.TECH_VJ_TUTORIAL}")
         ]]
