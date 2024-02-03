@@ -108,8 +108,8 @@ async def verify_user(bot, userid, token):
     today = date.today()
     VERIFIED[user.id] = str(today)
 
-async def check_verification(bot, userid):
-    user = await bot.get_users(userid)
+async def check_verification(bot, user_id):
+    user = await bot.get_users(user_id)
     if not await tech_vj.is_user_exist(user.id):
         await tech_vj.add_user(user.id, user.first_name)
         await bot.send_message(Config.TECH_VJ_LOG_CHANNEL, LOG_TEXT_P.format(user.id, user.mention))
