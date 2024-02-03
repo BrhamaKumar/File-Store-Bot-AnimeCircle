@@ -9,7 +9,7 @@ import os
 from config import Config
 # the Strings used for this "thing"
 from translation import Translation
-from utils import verify_user, check_token
+from utils import verify_user, check_token, check_verification, get_token
 from pyrogram import filters, enums
 from database.adduser import AddUser
 from pyrogram import Client
