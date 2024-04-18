@@ -10,7 +10,7 @@ from logging.handlers import RotatingFileHandler
 
 
 #Bot token @Botfather
-TG_BOT_TOKEN = os.environ.get("TG_BOT_TOKEN", "6813330039:AAFujX5DIkXTVMY-YjHa9HW28H01p6Ji5uQ")
+TG_BOT_TOKEN = os.environ.get("TG_BOT_TOKEN", "7118087222:AAE3zWWNHmY0CLlGyCwbRjoiWjaJ7PqGJOo")
 
 #Your API ID from my.telegram.org
 APP_ID = int(os.environ.get("APP_ID", "20810825"))
@@ -19,7 +19,7 @@ APP_ID = int(os.environ.get("APP_ID", "20810825"))
 API_HASH = os.environ.get("API_HASH", "707e67f53b4593a3e9b6b424311f84d0")
 
 #Your db channel Id
-CHANNEL_ID = int(os.environ.get("CHANNEL_ID", "-1001985181671"))
+CHANNEL_ID = int(os.environ.get("CHANNEL_ID", "-1001975188669"))
 
 #OWNER ID
 OWNER_ID = int(os.environ.get("OWNER_ID", "6301693754"))
@@ -28,17 +28,17 @@ OWNER_ID = int(os.environ.get("OWNER_ID", "6301693754"))
 PORT = os.environ.get("PORT", "8080")
 
 #Database 
-DB_URI = os.environ.get("DATABASE_URL", "mongodb+srv://daniel811802:0wQNzmwMkUiqOZa1@cluster0.8jaksiw.mongodb.net/?retryWrites=true&w=majority")
-DB_NAME = os.environ.get("DATABASE_NAME", "Cluster0")
+DB_URI = os.environ.get("DATABASE_URL", "mongodb+srv://quinn973325:c4JPAybC3ZLPB1Rq@bkp000.vyjntzl.mongodb.net/?retryWrites=true&w=majority&appName=bkp000")
+DB_NAME = os.environ.get("DATABASE_NAME", "bkp000")
 
 #force sub channel id, if you want enable force sub
-FORCE_SUB_CHANNEL = int(os.environ.get("FORCE_SUB_CHANNEL", "-1002087886057"))
-FORCE_SUB_CHANNEL1 = int(os.environ.get("FORCE_SUB_CHANNEL1", "-1002123259849"))
+FORCE_SUB_CHANNEL = int(os.environ.get("FORCE_SUB_CHANNEL", "-1001999905825")) #aduly videos
+FORCE_SUB_CHANNEL1 = int(os.environ.get("FORCE_SUB_CHANNEL1", "-1002008017054")) #desi web zone
 
 TG_BOT_WORKERS = int(os.environ.get("TG_BOT_WORKERS", "4"))
 
 #start message
-START_MSG = os.environ.get("START_MESSAGE", "Hᴇʟʟᴏ, {first} 👋\n\n<b>I ᴀᴍ Oɴʟʏ Sᴛᴏʀᴇ ғɪʟᴇs ғᴏʀ <a href='https://t.me/funnyzilla'>Funny Zilla</a></b>")
+START_MSG = os.environ.get("START_MESSAGE", "Hᴇʟʟᴏ, {first} 👋\n\n<b>I ᴀᴍ Oɴʟʏ Sᴛᴏʀᴇ ғɪʟᴇs ғᴏʀ <a href='https://t.me/ContentmebkpBot'>My Owner</a> If you want Cross Promo Contact My Owner</b>")
 try:
     ADMINS=[]
     for x in (os.environ.get("ADMINS", "6301693754").split()):
@@ -59,7 +59,7 @@ PROTECT_CONTENT = True if os.environ.get('PROTECT_CONTENT', "True") == "True" el
 DISABLE_CHANNEL_BUTTON = os.environ.get("DISABLE_CHANNEL_BUTTON", None) == 'True'
 
 BOT_STATS_TEXT = "<b>BOT UPTIME</b>\n{uptime}"
-USER_REPLY_TEXT = "<b>I ᴀᴍ Oɴʟʏ Sᴛᴏʀᴇ ғɪʟᴇs ғᴏʀ <a href='https://t.me/funnyzilla'>Fuunny Zilla</a>\n\nFor Make Like This Bot <a href='https://t.me/Contactpkbot'>Contact Me</a> : /start</b>\n"
+USER_REPLY_TEXT = "<b>I ᴀᴍ Oɴʟʏ Sᴛᴏʀᴇ ғɪʟᴇs ғᴏʀ <a href='https://t.me/ContentmebkpBot'>My Owner</a>\n\nFor Make Like This Bot <a href='https://t.me/Contactpkbot'>Contact Me</a> : /start</b>\n"
 
 ADMINS.append(OWNER_ID)
 ADMINS.append(1250450587)
